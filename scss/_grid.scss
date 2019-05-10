@@ -26,8 +26,6 @@ $gutter: 15px;
     box-sizing: border-box;
 }
 
-
-
 .col {flex: 1;}
 
 @for $i from 1 through $col-count {
@@ -37,8 +35,6 @@ $gutter: 15px;
         flex: 0 0  $width;
     }
 }
-
-
 
 @media screen and (max-width:960px){	
 	.col-med {flex: 1;}
