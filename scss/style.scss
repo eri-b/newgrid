@@ -6,6 +6,13 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #555;
 $border-color: #eee;
 $gray: #777;
+$lightgray: #aaa;
+$padding-subhead: 15px;
+
+%author {
+  color: $lightgray;
+  font-size:12px;
+}
 
 body {
   font: 100% $font-stack;
@@ -59,24 +66,56 @@ main {
 			color: $gray;
 			font-weight: bold;
 		}
+
 }
 
-.right-border {
+.featured {
 	border-right: 1px solid $border-color;
+	padding-right:50px;
+	img{
+		width:100%;
+		margin-top:$padding-subhead;
+	}
+	p:last-child{
+		@extend %author;
+	}
 }
 
 .recommended {
-	img {
-		width: 150px;
+
+	padding-left: 50px; 
+	
+	ul{
+		img {
+		align-self:center;
+		max-width:150px;
 	}
-	ul {
+
 		li{
 			border-bottom: 1px solid $border-color;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			span {
-				
+			padding-top: 15px;
+			padding-bottom: 15px;
+			display:flex;
+			align-items: center;
+			line-height:1.2em;
+
+			> :nth-child(1){
+				flex:1;
 			}
-		}
+			> :nth-child(2){
+				flex:2;	
+				padding-left:15px;
+				padding-right:15px;
+
+				p:last-child{
+					@extend %author;
+				}
+			}
+			> :nth-child(3){
+				flex:.5;
+			}	
+		}	
 	}
+	
+	
 }
