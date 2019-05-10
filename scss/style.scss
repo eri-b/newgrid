@@ -18,8 +18,8 @@ body {
 }
 
 .container-fluid{
-	width:80%;
-	margin:0 auto;
+	width:100%;
+	padding: 0 20px;
 	box-sizing:border-box;
 }
 
@@ -31,15 +31,17 @@ body {
 
 /* TEMP */
 .row > div {
-  border: 1px solid red;
-  height: 100px;
-  background-color: orange;
+
 }
 
-[class*="col"] {
+[class^="col"] {
     box-sizing: border-box;
-  	padding: $gutter;
 }
+
+.pad {
+	padding: $gutter;
+}
+
 
 .col {flex: 1;}
 .col-1{flex: 0 0 ((1 / $col-count)*100%);}
@@ -57,11 +59,7 @@ body {
 
 
 
-@media screen and (max-width:960px){
-
-	.container{padding:0 20px}
-	.container-fluid{width:100%; padding:0 20px;}
-	
+@media screen and (max-width:960px){	
 	.col-med {flex: 1;}
 	.col-med-1{flex: 0 0 ((1 / $col-count)*100%);}
 	.col-med-2{flex: 0 0 ((2 / $col-count)*100%);}
