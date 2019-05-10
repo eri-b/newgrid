@@ -1,0 +1,16 @@
+// base.scss
+@import 'reset';
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #555;
+$container-width: 1240px;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: #efefef;
+}
+
+.container{
+  max-width:$container-width;
+}
