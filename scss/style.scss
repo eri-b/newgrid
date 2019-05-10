@@ -3,7 +3,7 @@
 
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #555;
-$container-width: 1240px;
+$col-count: 12;
 
 body {
   font: 100% $font-stack;
@@ -11,6 +11,56 @@ body {
   background-color: #efefef;
 }
 
-.container{
-  max-width:$container-width;
+/*.container{
+  max-width: ;
+}*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.row > div {
+  border: 1px solid red;
+  height: 100px;
+  background-color: orange;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-1{
+  flex: 0 0 ((1 / $col-count)*100%);
+}
+
+.col-2{
+  flex: 0 0 (2 / $col-count);
+}
+
+.col-3{
+  flex: 0 0 (3 / $col-count);
+}
+
+.col-4{
+  flex: 0 0 ((4 / $col-count)*100%);
+  box-sizing: border-box;
+}
+
+.col-8 {
+  flex: 0 0 ((8 / $col-count)*100%);
+  box-sizing: border-box;
+}
+
+.col-9{
+  flex: 0 0 (9 / $col-count);
+}
+
+.col-10{
+  flex: 0 0 (10 / $col-count);
+}
+
+.col-11{
+  flex: 0 0 (11 / $col-count);
 }

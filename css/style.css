@@ -13,7 +13,45 @@ body {
   color: #555;
   background-color: #efefef; }
 
-.container {
-  max-width: 1240px; }
+/*.container{
+  max-width: ;
+}*/
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+
+.row > div {
+  border: 1px solid red;
+  height: 100px;
+  background-color: orange; }
+
+.col {
+  flex: 1; }
+
+.col-1 {
+  flex: 0 0 8.3333333333%; }
+
+.col-2 {
+  flex: 0 0 0.1666666667; }
+
+.col-3 {
+  flex: 0 0 0.25; }
+
+.col-4 {
+  flex: 0 0 33.3333333333%;
+  box-sizing: border-box; }
+
+.col-8 {
+  flex: 0 0 66.6666666667%;
+  box-sizing: border-box; }
+
+.col-9 {
+  flex: 0 0 0.75; }
+
+.col-10 {
+  flex: 0 0 0.8333333333; }
+
+.col-11 {
+  flex: 0 0 0.9166666667; }
 
 /*# sourceMappingURL=style.css.map */
