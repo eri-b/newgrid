@@ -104,7 +104,6 @@ header{
 		
 		border-top:1px solid $border-color;
 		border-bottom:1px solid $border-color;
-		overflow:scroll;
 
 		ul{
 			display:flex;
@@ -290,6 +289,29 @@ main {
 
 .mobile{display:none;}
 
+footer {
+		border-top: 2px solid #666;
+		padding: 25px 0;
+
+	.top-part {
+		padding-bottom: 20px;
+
+		> a {
+			padding-right: 20px;
+		}
+	}
+
+	.bottom-part {
+		padding: 50px 0;
+		ul {
+			:first-child {
+				font-weight: bold;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
 @media screen and (max-width:800px){
 	.recommended, .featured{padding:0px;}
 	
@@ -302,5 +324,12 @@ main {
 	.desktop{display:none;}
 	
 	.top-nav .row:not(.mobile) :nth-child(2){padding-bottom:25px;}
-}
+	header .top-nav {
+		padding-right: 0;
+		padding-left: 0;
+	}
 
+	nav {
+		overflow-x:scroll;
+	}
+}

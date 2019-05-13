@@ -1029,8 +1029,7 @@ header .top-nav {
       text-align: right; }
 header nav {
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  overflow: scroll; }
+  border-bottom: 1px solid #eee; }
   header nav ul {
     display: flex;
     justify-content: space-between;
@@ -1125,6 +1124,19 @@ main .row {
 .mobile {
   display: none; }
 
+footer {
+  border-top: 2px solid #666;
+  padding: 25px 0; }
+  footer .top-part {
+    padding-bottom: 20px; }
+    footer .top-part > a {
+      padding-right: 20px; }
+  footer .bottom-part {
+    padding: 50px 0; }
+    footer .bottom-part ul :first-child {
+      font-weight: bold;
+      padding-bottom: 10px; }
+
 @media screen and (max-width: 800px) {
   .recommended, .featured {
     padding: 0px; }
@@ -1143,6 +1155,13 @@ main .row {
     display: none; }
 
   .top-nav .row:not(.mobile) :nth-child(2) {
-    padding-bottom: 25px; } }
+    padding-bottom: 25px; }
+
+  header .top-nav {
+    padding-right: 0;
+    padding-left: 0; }
+
+  nav {
+    overflow-x: scroll; } }
 
 /*# sourceMappingURL=style.css.map */
