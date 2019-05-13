@@ -25,7 +25,7 @@ $m-padding: 15px;
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 [class^="col"] {
@@ -44,12 +44,12 @@ $m-padding: 15px;
 
 
 @media screen and (max-width:1024px){	
-	.col-med {flex: 1;}
+	.col-md {flex: 1;}
 
 	@for $i from 1 through $col-count {
     $width: percentage($i / $col-count);
 
-    .col-med-#{$i} {
+    .col-md-#{$i} {
         flex: 0 0  $width;
     }
 	

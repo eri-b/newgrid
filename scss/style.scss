@@ -114,8 +114,8 @@ main {
 
 }
 
-.top{
-
+.row {
+	margin-top: 20px;
 }
 
 .featured {
@@ -240,9 +240,6 @@ main {
 .fresh{
 	
 	@extend %grid-style;
-	.row{
-		margin-top:20px;
-	}
 }
 
 .grid2 {
@@ -257,4 +254,6 @@ main {
 	}
 }
 
-
+.takingoff {
+	@extend %grid-style;
+}
