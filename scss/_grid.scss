@@ -19,7 +19,7 @@ $gutter: 15px;
 .row {
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: space-between; 
 }
 
 [class^="col"] {
@@ -29,7 +29,7 @@ $gutter: 15px;
 .col {flex: 1;}
 
 @for $i from 1 through $col-count {
-    $width: percentage($i / $col-count);
+    $width: percentage(($i / $col-count) - .02);
 
     .col-#{$i} {
         flex: 0 0  $width;
