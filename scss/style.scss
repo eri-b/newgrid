@@ -292,8 +292,21 @@ main {
 footer {
 		border-top: 2px solid #666;
 		padding: 25px 0;
+		
+		hr{
+			border:2px solid $border-color;
+		}
 
 	.top-part {
+		padding-bottom: 20px;
+
+		> a {
+			padding-right: 20px;
+		}
+	}
+
+	.v-bottom-part {
+		padding-top: 20px;
 		padding-bottom: 20px;
 
 		> a {
@@ -310,9 +323,22 @@ footer {
 			}
 		}
 	}
+
+	.social{
+		.row{
+			:last-child{
+				text-align: right;
+				font-size:18px;
+				i{ margin-left:10px;}
+			}
+		}
+	}
 }
 
 @media screen and (max-width:800px){
+
+	.row > *{margin-top:20px;}
+
 	.recommended, .featured{padding:0px;}
 	
 	.recommended > *, 
@@ -332,4 +358,6 @@ footer {
 	nav {
 		overflow-x:scroll;
 	}
+	img{width:100%; max-width:none;}
+	.bottom-part ul{margin-top:20px;}
 }
