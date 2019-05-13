@@ -14,16 +14,25 @@ $padding-subhead: 15px;
   font-size:12px;
 }
 
-body {
-  font: 100% $font-stack;
-  color: $primary-color;
-}
-
-h1 {
+%header1 {
 	font-size: 24px;
 	color: black;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+%crimsonFont {
+	font-family: 'Crimson Text', serif;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+	@extend %header1;
 }
 
 header{
@@ -68,6 +77,31 @@ main {
 		}
 
 }
+
+.tenYears {
+	.row {
+		:first-child{
+			padding-right: 25px;
+			img {max-width: 100%
+			}
+		}
+		:nth-child(2){
+			div:first-child {
+				padding-left: 25px;
+				border-left: 4px solid green;
+				h1 {
+					@extend %crimsonFont;
+				}
+				}
+			div:nth-child(2) {
+				padding-top: 40px;
+				color: blue;
+				}
+			}
+		}
+}
+
+
 
 .featured {
 	border-right: 1px solid $border-color;
