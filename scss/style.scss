@@ -9,6 +9,8 @@ $gray: #777;
 $lightgray: #aaa;
 $padding-subhead: 15px;
 
+
+
 %author {
   color: $lightgray;
   font-size:12px;
@@ -32,6 +34,7 @@ $padding-subhead: 15px;
 %ablue:hover{
 	text-decoration: underline;
 }
+
 
 %grid-style{
 	h2{
@@ -111,6 +114,9 @@ main {
 
 }
 
+.top{
+
+}
 
 .featured {
 	border-right: 1px solid $border-color;
@@ -181,6 +187,7 @@ main {
 }
 
 .tenYears {
+	
 	.row {
 		:first-child{
 			padding-right: 25px;
@@ -209,6 +216,7 @@ main {
 
 
 .sub{
+	
 	text-align:center;
 
 	form{
@@ -230,6 +238,7 @@ main {
 }
 
 .fresh{
+	
 	@extend %grid-style;
 	.row{
 		margin-top:20px;
@@ -237,6 +246,7 @@ main {
 }
 
 .grid2 {
+	
 	@extend %grid-style;
 	a {
 		@extend %ablue;

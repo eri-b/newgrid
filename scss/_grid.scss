@@ -1,9 +1,18 @@
-$col-count: 12;
-$gutter: 15px;
+$col-count: 100;
+$container: 1280px;
+$m-padding: 15px;
 
 .container{
-  max-width: 1280px;
+  max-width: $container;
   margin:0 auto;
+}
+
+@media screen and (max-width:$container){ 
+  .container{
+    padding-left: $m-padding;
+    padding-right: $m-padding;
+  }
+    
 }
 
 .container-fluid{
@@ -12,9 +21,6 @@ $gutter: 15px;
 	box-sizing:border-box;
 }
 
-.pad {
-	padding: $gutter;
-}
 
 .row {
   display: flex;
@@ -29,18 +35,19 @@ $gutter: 15px;
 .col {flex: 1;}
 
 @for $i from 1 through $col-count {
-    $width: percentage(($i / $col-count) - 0.02);
+    $width: percentage($i / $col-count);
 
     .col-#{$i} {
         flex: 0 0  $width;
     }
 }
 
-@media screen and (max-width:960px){	
+
+@media screen and (max-width:1024px){	
 	.col-med {flex: 1;}
 
 	@for $i from 1 through $col-count {
-    $width: percentage(($i / $col-count) - 0.02);
+    $width: percentage($i / $col-count);
 
     .col-med-#{$i} {
         flex: 0 0  $width;
@@ -50,16 +57,20 @@ $gutter: 15px;
 
 }
 
-@media screen and (max-width:540px){
+@media screen and (max-width:800px){
 	.col-sm {flex: 1;}
 
 	@for $i from 1 through $col-count {
-    $width: percentage(($i / $col-count) - 0.02);
+    $width: percentage($i / $col-count);
 
     .col-sm-#{$i} {
         flex: 0 0  $width;
     }
 	}
 
+  .container.full-mobile{
+      padding-left: 0;
+      padding-right: 0;
+  }
 	
 }
