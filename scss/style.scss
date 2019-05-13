@@ -30,10 +30,10 @@ $padding-subhead: 15px;
 }
 
 %ablue:hover{
-	color:black;
+	text-decoration: underline;
 }
 
-%grid4{
+%grid-style{
 	h2{
 		font-size:22px;
 		margin:10px 0;
@@ -230,12 +230,21 @@ main {
 }
 
 .fresh{
-	@extend %grid4;
+	@extend %grid-style;
 	.row{
 		margin-top:20px;
 	}
 }
 
-
+.grid2 {
+	@extend %grid-style;
+	a {
+		@extend %ablue;
+	}
+	div > div > div {
+		padding-left: 25px;
+		border-left: 6px solid black;
+	}
+}
 
 

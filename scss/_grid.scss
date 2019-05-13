@@ -29,7 +29,7 @@ $gutter: 15px;
 .col {flex: 1;}
 
 @for $i from 1 through $col-count {
-    $width: percentage(($i / $col-count) - .02);
+    $width: percentage(($i / $col-count) - 0.02);
 
     .col-#{$i} {
         flex: 0 0  $width;
@@ -40,7 +40,7 @@ $gutter: 15px;
 	.col-med {flex: 1;}
 
 	@for $i from 1 through $col-count {
-    $width: percentage($i / $col-count);
+    $width: percentage(($i / $col-count) - 0.02);
 
     .col-med-#{$i} {
         flex: 0 0  $width;
@@ -54,7 +54,7 @@ $gutter: 15px;
 	.col-sm {flex: 1;}
 
 	@for $i from 1 through $col-count {
-    $width: percentage($i / $col-count);
+    $width: percentage(($i / $col-count) - 0.02);
 
     .col-sm-#{$i} {
         flex: 0 0  $width;

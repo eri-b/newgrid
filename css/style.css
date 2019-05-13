@@ -101,80 +101,80 @@ a {
     flex: 1; }
 
   .col-med-1 {
-    flex: 0 0 8.3333333333%; }
+    flex: 0 0 6.3333333333%; }
 
   .col-med-2 {
-    flex: 0 0 16.6666666667%; }
+    flex: 0 0 14.6666666667%; }
 
   .col-med-3 {
-    flex: 0 0 25%; }
+    flex: 0 0 23%; }
 
   .col-med-4 {
-    flex: 0 0 33.3333333333%; }
+    flex: 0 0 31.3333333333%; }
 
   .col-med-5 {
-    flex: 0 0 41.6666666667%; }
+    flex: 0 0 39.6666666667%; }
 
   .col-med-6 {
-    flex: 0 0 50%; }
+    flex: 0 0 48%; }
 
   .col-med-7 {
-    flex: 0 0 58.3333333333%; }
+    flex: 0 0 56.3333333333%; }
 
   .col-med-8 {
-    flex: 0 0 66.6666666667%; }
+    flex: 0 0 64.6666666667%; }
 
   .col-med-9 {
-    flex: 0 0 75%; }
+    flex: 0 0 73%; }
 
   .col-med-10 {
-    flex: 0 0 83.3333333333%; }
+    flex: 0 0 81.3333333333%; }
 
   .col-med-11 {
-    flex: 0 0 91.6666666667%; }
+    flex: 0 0 89.6666666667%; }
 
   .col-med-12 {
-    flex: 0 0 100%; } }
+    flex: 0 0 98%; } }
 @media screen and (max-width: 540px) {
   .col-sm {
     flex: 1; }
 
   .col-sm-1 {
-    flex: 0 0 8.3333333333%; }
+    flex: 0 0 6.3333333333%; }
 
   .col-sm-2 {
-    flex: 0 0 16.6666666667%; }
+    flex: 0 0 14.6666666667%; }
 
   .col-sm-3 {
-    flex: 0 0 25%; }
+    flex: 0 0 23%; }
 
   .col-sm-4 {
-    flex: 0 0 33.3333333333%; }
+    flex: 0 0 31.3333333333%; }
 
   .col-sm-5 {
-    flex: 0 0 41.6666666667%; }
+    flex: 0 0 39.6666666667%; }
 
   .col-sm-6 {
-    flex: 0 0 50%; }
+    flex: 0 0 48%; }
 
   .col-sm-7 {
-    flex: 0 0 58.3333333333%; }
+    flex: 0 0 56.3333333333%; }
 
   .col-sm-8 {
-    flex: 0 0 66.6666666667%; }
+    flex: 0 0 64.6666666667%; }
 
   .col-sm-9 {
-    flex: 0 0 75%; }
+    flex: 0 0 73%; }
 
   .col-sm-10 {
-    flex: 0 0 83.3333333333%; }
+    flex: 0 0 81.3333333333%; }
 
   .col-sm-11 {
-    flex: 0 0 91.6666666667%; }
+    flex: 0 0 89.6666666667%; }
 
   .col-sm-12 {
-    flex: 0 0 100%; } }
-.fresh p:last-child, .featured p:last-child, .recommended ul li > :nth-child(2) p:last-child {
+    flex: 0 0 98%; } }
+.fresh p:last-child, .grid2 p:last-child, .featured p:last-child, .recommended ul li > :nth-child(2) p:last-child {
   color: #aaa;
   font-size: 12px; }
 
@@ -187,19 +187,19 @@ h1 {
 h5, .tenYears .row :nth-child(2) div:first-child h1 {
   font-family: 'Crimson Text', serif; }
 
-.recommended a, .tenYears .row :nth-child(2) div:nth-child(2) a {
+.recommended a, .tenYears .row :nth-child(2) div:nth-child(2) a, .grid2 a {
   color: blue; }
 
-.recommended a:hover, .tenYears .row :nth-child(2) div:nth-child(2) a:hover {
-  color: black; }
+.recommended a:hover, .tenYears .row :nth-child(2) div:nth-child(2) a:hover, .grid2 a:hover {
+  text-decoration: underline; }
 
-.fresh h2 {
+.fresh h2, .grid2 h2 {
   font-size: 22px;
   margin: 10px 0;
   color: black; }
-.fresh p:last-child {
+.fresh p:last-child, .grid2 p:last-child {
   margin-top: 15px; }
-.fresh img {
+.fresh img, .grid2 img {
   max-width: 100%; }
 
 body {
@@ -304,5 +304,9 @@ main .title-small {
 
 .fresh .row {
   margin-top: 20px; }
+
+.grid2 div > div > div {
+  padding-left: 25px;
+  border-left: 6px solid black; }
 
 /*# sourceMappingURL=style.css.map */
