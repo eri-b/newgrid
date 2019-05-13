@@ -2,7 +2,7 @@
 @import 'reset';
 @import 'grid';
 
-$font-stack:    Helvetica, sans-serif;
+$font-stack:'Nunito Sans', sans-serif;
 $primary-color: #555;
 $border-color: #eee;
 $gray: #777;
@@ -25,6 +25,10 @@ $padding-subhead: 15px;
 
 %crimsonFont {
 	font-family: 'Crimson Text', serif;
+}
+
+%sansFont {
+	font-family: $font-stack;
 }
 
 %ablue{
@@ -54,7 +58,7 @@ $padding-subhead: 15px;
 body {
   font: 100% $font-stack;
   color: $primary-color;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: $font-stack;
 }
 
 h1 {
@@ -68,11 +72,31 @@ h5{
 
 header{
 	.top-nav{
-		padding-top:25px;
-		padding-bottom:25px;
+		padding:25px 15px;
+		img{
+			width: 200px;
+		}
 
 		a:first-child{
 			margin-right:20px;
+		}
+
+		.row{
+			:nth-child(2){
+				text-align: center;
+			}
+			:nth-child(3){
+				text-align: right;
+			}
+		}
+
+		.mobile{
+			border-top:1px solid $border-color;
+			padding: 25px 15px 0px 15px;
+			:nth-child(2){
+				text-align: right;
+			}
+
 		}
 	}
 
@@ -80,6 +104,7 @@ header{
 		
 		border-top:1px solid $border-color;
 		border-bottom:1px solid $border-color;
+		overflow:scroll;
 
 		ul{
 			display:flex;
@@ -112,11 +137,12 @@ main {
 			text-transform: uppercase;
 		}
 
+		.row {
+			margin-top: 20px;
+		}
 }
 
-.row {
-	margin-top: 20px;
-}
+
 
 .featured {
 	border-right: 1px solid $border-color;
@@ -244,16 +270,37 @@ main {
 
 .grid2 {
 	
-	@extend %grid-style;
+	@extend %crimsonFont;
+
 	a {
 		@extend %ablue;
+		@extend %sansFont;
+
 	}
 	div > div > div {
 		padding-left: 25px;
 		border-left: 6px solid black;
+		margin: 15px 0;
 	}
 }
 
 .takingoff {
 	@extend %grid-style;
 }
+
+.mobile{display:none;}
+
+@media screen and (max-width:800px){
+	.recommended, .featured{padding:0px;}
+	
+	.recommended > *, 
+	.featured > *{padding:0px 15px;}
+
+	.featured > img{padding:0px;}
+
+	.mobile{display:flex;}
+	.desktop{display:none;}
+	
+	.top-nav .row:not(.mobile) :nth-child(2){padding-bottom:25px;}
+}
+
